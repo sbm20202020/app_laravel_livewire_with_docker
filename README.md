@@ -9,10 +9,12 @@ Laravel Sail est une interface de ligne de commande légère pour interagir avec
 Déjà un expert Docker? Ne t'inquiète pas! Tout sur Sail peut être personnalisé à l'aide du docker-compose.ymlfichier inclus avec Laravel.
 
 
-Premiers pas sous Linux
+## Premiers pas sous Linux
+
 Si vous développez sous Linux et que Docker est déjà installé, vous pouvez utiliser une simple commande de terminal pour créer un nouveau projet Laravel. Par exemple, pour créer une nouvelle application Laravel dans un répertoire nommé "example-app", vous pouvez exécuter la commande suivante dans votre terminal:
 
-curl -s https://laravel.build/example-app | bash
+>curl -s https://laravel.build/example-app | bash
+
 Bien sûr, vous pouvez remplacer "example-app" dans cette URL par tout ce que vous voulez. Le répertoire de l'application Laravel sera créé dans le répertoire à partir duquel vous exécutez la commande.
 
 Une fois le projet créé, vous pouvez accéder au répertoire de l'application et démarrer Laravel Sail. Laravel Sail fournit une interface de ligne de commande simple pour interagir avec la configuration Docker par défaut de Laravel:
