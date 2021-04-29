@@ -27,4 +27,41 @@ La première fois que vous exécutez la **upcommande** Sail, les conteneurs d'ap
 
 Une fois les conteneurs Docker de l'application démarrés, vous pouvez accéder à l'application dans votre navigateur Web à l' adresse: http://localhost .
 
+## Installation de NodeJs et Npm
+
+### Option 2 - Installer Node.js avec Apt en utilisant un PPA NodeSource
+
+Pour installer une version différente de Node.js, vous pouvez utiliser une PPA (archive personnelle de paquets) maintenue par NodeSource. Ces PPA ont plus de versions de Node.js disponibles que les dépôts officiels Ubuntu. Les Node.js v10, v12, v13 et v14 sont disponibles au moment de la rédaction.
+
+Tout d'abord, nous allons installer le PPA afin d'avoir accès à ses paquets. Dans votre répertoire d'origine, utilisez curl pour récupérer le script d'installation de votre version préférée, en veillant à remplacer 14.x par la chaîne de caractères de votre version préférée (si elle est différente).
+
+`cd ~`
+`curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh`
+ 
+Reportez-vous à la documentation NodeSource pour plus d'informations sur les versions disponibles.
+
+Inspectez le contenu du script téléchargé avec nano (ou votre éditeur de texte préféré) :
+
+`nano nodesource_setup.sh`
+ 
+Lorsque vous êtes convaincu que le script est sûr, quittez votre éditeur, puis exécutez le script avec sudo :
+
+`sudo bash nodesource_setup.sh`
+ 
+Le PPA sera ajouté à votre configuration et le cache local de votre package sera automatiquement mis à jour. Vous pouvez maintenant installer le paquet Node.js de la même manière que vous l'avez fait dans la section précédente :
+
+`sudo apt-get install -y nodejs`
+ 
+Vérifiez que vous avez installé la nouvelle version en exécutant node avec le drapeau de version -v :
+
+`node -v`
+ 
+Output
+v14.2.0
+Le paquet NodeSource nodejs contient à la fois le binaire du node et npm, vous n'avez donc pas besoin d'installer npm séparément.
+
+À ce stade, vous avez installé avec succès Node.js et npm en utilisant apt et le PPA NodeSource. La section suivante montrera comment utiliser le gestionnaire de versions de Node pour installer et gérer plusieurs versions de Node.js.
+
+
+
 [^1]:StarlyBelovedMulebo
